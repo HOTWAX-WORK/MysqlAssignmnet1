@@ -1,0 +1,15 @@
+SELECT 
+    COUNT(*) AS TOTAL_ORDERS,
+    SUM(oh.GRAND_TOTAL) AS TOTAL_REVENUE 
+FROM 
+    order_header oh 
+LEFT JOIN 
+    order_shipment os 
+    ON oh.ORDER_ID = os.ORDER_ID 
+    AND oh.SALES_CHANNEL_ENUM_ID = 'WEB_SALES_CHANNEL'
+JOIN 
+    shipment s 
+    ON os.SHIPMENT_ID = s.SHIPMENT_ID 
+    AND s.SHIPMENT_METHOD_TYPE_ID = 'STOREPICKUP'
+WHERE 
+    YEAR(oh.ORDER_DATE) = 'YEAR(CURDATE()) - 1';
