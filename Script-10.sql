@@ -13,3 +13,8 @@ JOIN
     AND s.SHIPMENT_METHOD_TYPE_ID = 'STOREPICKUP'
 WHERE 
     YEAR(oh.ORDER_DATE) = 'YEAR(CURDATE()) - 1';
+    
+    
+    --EXPLANATION (APPROACH)
+    
+    -- It retrieves the total count of orders (TOTAL_ORDERS) and sums the GRAND_TOTAL (TOTAL_REVENUE) for orders made through the 'WEB_SALES_CHANNEL' and fulfilled using the 'STOREPICKUP' shipment method as we only need BOPIS orders. The results are filtered to include only orders from the previous year (YEAR(CURDATE()) - 1).

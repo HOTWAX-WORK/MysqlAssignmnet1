@@ -9,3 +9,5 @@ where pr.ROLE_TYPE_ID = 'Customer' and cm.CONTACT_MECH_TYPE_ID != 'POSTAL_ADDRES
 
 --EXPLANATION (APPROACH)
 -- I have started the join with a party table as i need all the customers which signed in during june 2023 and i have the created date stored in party table . I have connected join with party role table as i want ony customers data . Then i have connected it with person table as i want the fields like person's first_name ,last name .Then to fetch the contact info connected it with party contact mech and fetch email from contact mech and contact number from telecom number table . Used left join with telecom number because i also want contact related to email address and then i also applied condition that cm.CONTACT_MECH_TYPE_ID != 'POSTAL_ADDRESS' because i want to eliminate the contact mech with POSTAL_ADDRESS.
+
+--Cost : 17305.58

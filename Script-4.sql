@@ -8,7 +8,10 @@ FROM
 JOIN 
     good_identification GI 
     ON P.PRODUCT_ID = GI.PRODUCT_ID
-WHERE 
-    GI.GOOD_IDENTIFICATION_TYPE_ID IN ('ERP_ID', 'SHOPIFY_PROD_ID','SKU')
 GROUP BY 
     P.PRODUCT_ID;
+    
+    
+    
+    --EXPLANATION (APPROACH)
+    --It selects the PRODUCT_ID from the product table and uses conditional aggregation to retrieve the ERP_ID, HOTWAX_ID_SKU, and SHOPIFY_PRODUCT_ID from the good_identification table.The query groups results by PRODUCT_ID, returning each product’s identifiers for all the systems.
