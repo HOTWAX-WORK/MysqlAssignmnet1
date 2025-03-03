@@ -1,3 +1,16 @@
+-- New Customers Acquired in June 2023
+-- Business Problem:
+-- The marketing team ran a campaign in June 2023 and wants to see how many new customers signed up during that period.
+-- Fields to Retrieve:
+
+-- PARTY_ID
+-- FIRST_NAME
+-- LAST_NAME
+-- EMAIL
+-- PHONE
+-- ENTRY_DATE
+
+
 select p.party_id,per.first_name ,per.last_name,cm.INFO_STRING ,tn.CONTACT_NUMBER ,p.created_date
 from party p
 join party_role pr on pr.PARTY_ID =p.PARTY_ID 
