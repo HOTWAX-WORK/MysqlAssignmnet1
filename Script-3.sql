@@ -1,3 +1,14 @@
+-- Products Missing NetSuite ID
+-- Business Problem:
+-- A product cannot sync to NetSuite unless it has a valid NetSuite ID. The OMS needs a list of all products that still need to be created or updated in NetSuite.
+
+-- Fields to Retrieve:
+
+-- PRODUCT_ID
+-- INTERNAL_NAME
+-- PRODUCT_TYPE_ID
+-- NETSUITE_ID (or similar field indicating the NetSuite ID; may be NULL or empty if missing)
+
 select p.product_Id,p.INTERNAL_NAME,p.PRODUCT_TYPE_ID,gi.GOOD_IDENTIFICATION_TYPE_ID
 from product p
 join good_identification gi on gi.PRODUCT_ID =p.PRODUCT_ID 
