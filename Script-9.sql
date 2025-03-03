@@ -1,3 +1,13 @@
+-- Orders Completed Hourly
+-- Business Problem:
+-- Operations teams may want to see how orders complete across the day to schedule staffing.
+
+-- Fields to Retrieve:
+
+-- TOTAL ORDERS
+-- HOUR
+
+
 select
 count(*),
 HOUR(OH.ORDER_DATE)
@@ -12,3 +22,6 @@ order by (hour(OH.ORDER_DATE))
 --EXPLANATION (APPROACH)
 
 --It counts the number of completed orders (ORDER_COMPLETED status) and groups them by the hour of the ORDER_DATE. The result shows the total number of orders for each hour. An optional filter can be added to focus on a specific date.
+
+
+--COST : 5648.60
