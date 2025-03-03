@@ -1,3 +1,12 @@
+-- Canceled Orders (Last Month)
+-- Business Problem:
+-- The merchandising team needs to know how many orders were canceled in the previous month and their reasons.
+
+-- Fields to Retrieve:
+
+-- TOTAL ORDERS
+-- CANCELATION REASON
+
 select count(*),os.CHANGE_REASON  from order_header oh 
 join order_status os on oh.ORDER_ID = os.ORDER_ID  
 and os.STATUS_ID = 'ORDER_CANCELLED' and os.STATUS_DATETIME between 
