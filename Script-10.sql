@@ -1,3 +1,12 @@
+-- BOPIS Orders Revenue (Last Year)
+-- Business Problem:
+-- BOPIS (Buy Online, Pickup In Store) is a key retail strategy. Finance wants to know the revenue from BOPIS orders for the previous year.
+
+-- Fields to Retrieve:
+
+-- TOTAL ORDERS
+-- TOTAL REVENUE
+
 SELECT 
     COUNT(*) AS TOTAL_ORDERS,
     SUM(oh.GRAND_TOTAL) AS TOTAL_REVENUE 
