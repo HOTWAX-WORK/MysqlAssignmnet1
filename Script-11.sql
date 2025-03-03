@@ -18,3 +18,6 @@ group by os.CHANGE_REASON;
 
 --EXPLANATION (APPROACH)
 --. It counts the number of canceled orders (TOTAL ORDERS) and groups them by the CHANGE_REASON field, which explains why each order was canceled. Also filters based on last month dates
+
+
+-- COST : 13715.12
