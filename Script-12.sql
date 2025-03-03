@@ -1,3 +1,11 @@
+-- Product Threshold Value
+-- Business Problem The retailer has set a threshild value for products that are sold online, in order to avoid over selling.
+
+-- Fields to Retrieve:
+
+-- PRODUCT ID
+-- THRESHOLD
+
 select pf.PRODUCT_ID ,pf.FACILITY_ID ,pf.MINIMUM_STOCK as THRESHOLD
 from product_facility pf 
 join facility f 
