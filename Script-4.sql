@@ -26,3 +26,6 @@ GROUP BY
     
     --EXPLANATION (APPROACH)
     --It selects the PRODUCT_ID from the product table and uses conditional aggregation to retrieve the ERP_ID, HOTWAX_ID_SKU, and SHOPIFY_PRODUCT_ID from the good_identification table.The query groups results by PRODUCT_ID, returning each product’s identifiers for all the systems.
+
+
+--COST : 2649970.53
